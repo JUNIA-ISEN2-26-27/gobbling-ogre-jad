@@ -1,4 +1,6 @@
-package com.jad.gobblingogre.model;
+package com.jad.gobblingogre.model.forest;
+
+import com.jad.gobblingogre.model.Tile;
 
 import java.awt.*;
 
@@ -46,7 +48,9 @@ abstract class AbstractForest implements Forest {
         return result;
     }
 
-    protected abstract int wrapX(final int x);
+    @Override
+    public boolean isTileWalkable(final Point newPosition) {
+        return this.getTile(newPosition).isWalkable();
+    }
 
-    protected abstract int wrapY(final int y);
 }

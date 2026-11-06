@@ -16,6 +16,14 @@ public class Controller implements IController {
 
     @Override
     public void proceed() {
-        this.view.display();
+        for (; ; ) {
+            try {
+                Thread.sleep(200);
+                this.view.display();
+                this.model.moveMobiles();
+            } catch (InterruptedException exception) {
+                Thread.currentThread().interrupt();
+            }
+        }
     }
 }

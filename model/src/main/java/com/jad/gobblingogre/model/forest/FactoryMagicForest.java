@@ -1,4 +1,4 @@
-package com.jad.gobblingogre.model;
+package com.jad.gobblingogre.model.forest;
 
 public class FactoryMagicForest implements FactoryForest {
     @Override

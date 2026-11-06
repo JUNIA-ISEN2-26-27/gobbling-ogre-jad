@@ -1,4 +1,4 @@
-package com.jad.gobblingogre.model;
+package com.jad.gobblingogre.model.forest;
 
 public class FactoryRectangleForest implements FactoryForest {
     @Override

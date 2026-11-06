@@ -1,4 +1,7 @@
-package com.jad.gobblingogre.model;
+package com.jad.gobblingogre.model.forest;
+
+import com.jad.gobblingogre.model.Sprite;
+import com.jad.gobblingogre.model.Tile;
 
 enum RealTile implements Tile {
     EMPTY(true, new Sprite(' ', new char[][]{
@@ -44,12 +47,9 @@ enum RealTile implements Tile {
         return RealTile.OAK;
     }
 
+    @Override
     public final boolean isWalkable() {
         return this.walkable;
-    }
-
-    public final Sprite getSprite() {
-        return this.sprite;
     }
 
     @Override
@@ -60,5 +60,9 @@ enum RealTile implements Tile {
     @Override
     public final char getSpriteCharacter() {
         return this.sprite.character();
+    }
+
+    public final Sprite getSprite() {
+        return this.sprite;
     }
 }

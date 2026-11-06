@@ -32,7 +32,7 @@ public class View implements IView {
 
     @Override
     public void display() {
-        final Board board = this.model.getBoard(new Point(-5, -5), new Point(50, 30));
+        final Board board = this.model.getBoard(new Point(-5, -5), new Point(55, 30));
         final Screen screen = View.boardToScreen(board);
         StringBuilder stringBuilder = new StringBuilder();
         for (int row = 0; row < screen.getHeight(); row++) {
