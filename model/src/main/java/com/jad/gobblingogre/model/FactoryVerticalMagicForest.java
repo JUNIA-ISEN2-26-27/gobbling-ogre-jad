@@ -7,7 +7,7 @@ public class FactoryVerticalMagicForest implements FactoryForest {
         final RealTile[][] tiles = new RealTile[height][width];
         for (int row = 0; row < height; row++) {
             for (int column = 0; column < width; column++) {
-                if ((row == 0 || row == height - 1)) {
+                if ((column == 0 || column == width - 1)) {
                     tiles[row][column] = RealTile.getRandomNotWalkableTile();
                 } else {
                     tiles[row][column] = RealTile.getRandomTile(correctDensity);

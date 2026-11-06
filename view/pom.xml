@@ -21,7 +21,7 @@
             <groupId>com.jad</groupId>
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>providec</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
