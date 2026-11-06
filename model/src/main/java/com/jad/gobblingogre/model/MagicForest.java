@@ -1,7 +1,7 @@
 package com.jad.gobblingogre.model;
 
 class MagicForest extends AbstractForest {
-    MagicForest(final int height, final int width, final Tile[][] tiles) {
+    MagicForest(final int height, final int width, final RealTile[][] tiles) {
         super(height, width, tiles);
     }
 

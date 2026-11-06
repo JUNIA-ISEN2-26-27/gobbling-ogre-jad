@@ -1,7 +1,7 @@
 package com.jad.gobblingogre.model;
 
 class RectangleForest extends AbstractForest {
-    RectangleForest(final int height, final int width, final Tile[][] tiles) {
+    RectangleForest(final int height, final int width, final RealTile[][] tiles) {
         super(height, width, tiles);
     }
 

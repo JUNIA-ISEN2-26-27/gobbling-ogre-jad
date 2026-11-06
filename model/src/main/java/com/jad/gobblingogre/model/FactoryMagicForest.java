@@ -1,13 +1,13 @@
 package com.jad.gobblingogre.model;
 
-public class FactoryMagicForest implements ForestFactory {
+public class FactoryMagicForest implements FactoryForest {
     @Override
-    public Forest createForest(int width, int height, int density) {
+    public Forest create(int width, int height, int density) {
         int correctDensity = Math.clamp(density, 0, 100);
-        final Tile[][] tiles = new Tile[height][width];
+        final RealTile[][] tiles = new RealTile[height][width];
         for (int row = 0; row < height; row++) {
             for (int column = 0; column < width; column++) {
-                tiles[row][column] = Tile.getRandomTile(correctDensity);
+                tiles[row][column] = RealTile.getRandomTile(correctDensity);
             }
         }
 

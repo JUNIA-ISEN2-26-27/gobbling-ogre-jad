@@ -1,6 +1,6 @@
 package com.jad.gobblingogre.model;
 
-enum Tile {
+enum RealTile implements Tile {
     EMPTY(true, new Sprite(' ', new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' '},
@@ -25,23 +25,23 @@ enum Tile {
     private final boolean walkable;
     private final Sprite sprite;
 
-    Tile(final boolean walkable, final Sprite sprite) {
+    RealTile(final boolean walkable, final Sprite sprite) {
         this.walkable = walkable;
         this.sprite = sprite;
     }
 
-    public static Tile getRandomTile(final int walkableChance) {
-        final Tile[] tiles = Tile.values();
+    public static RealTile getRandomTile(final int walkableChance) {
+        final RealTile[] tiles = RealTile.values();
         final int randomIndex = (int) (Math.random() * 100);
-        if (randomIndex < walkableChance) {
-            return Tile.EMPTY;
+        if (randomIndex >= walkableChance) {
+            return RealTile.EMPTY;
         }
         final int randomTileIndex = (int) (Math.random() * (tiles.length - 1)) + 1;
         return tiles[randomTileIndex];
     }
 
-    public static Tile getRandomNotWalkableTile() {
-        final Tile[] tiles = Tile.values();
+    public static RealTile getRandomNotWalkableTile() {
+        final RealTile[] tiles = RealTile.values();
         final int randomTileIndex = (int) (Math.random() * (tiles.length - 1)) + 1;
         return tiles[randomTileIndex];
     }
@@ -54,10 +54,12 @@ enum Tile {
         return this.sprite;
     }
 
+    @Override
     public final char[][] getSpriteArray() {
         return this.sprite.array();
     }
 
+    @Override
     public final char getSpriteCharacter() {
         return this.sprite.character();
     }

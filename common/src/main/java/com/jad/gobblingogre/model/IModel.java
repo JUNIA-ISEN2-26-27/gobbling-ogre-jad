@@ -4,4 +4,5 @@ import java.awt.*;
 
 public interface IModel {
 
+    Board getBoard(Point start, Point end);
 }

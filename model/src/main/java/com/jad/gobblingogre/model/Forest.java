@@ -7,5 +7,9 @@ public interface Forest {
 
     int getWidth();
 
+    Dimension getDimension();
+
     Tile getTile(Point position);
+
+    Tile[][] getTiles(final Point start, Point end);
 }
