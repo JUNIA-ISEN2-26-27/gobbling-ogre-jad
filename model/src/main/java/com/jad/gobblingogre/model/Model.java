@@ -1,4 +1,4 @@
-package com.jad.model;
+package com.jad.gobblingogre.model;
 
 public class Model implements IModel {
 }

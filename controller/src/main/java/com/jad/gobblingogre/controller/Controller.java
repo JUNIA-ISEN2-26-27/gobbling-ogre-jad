@@ -1,10 +1,7 @@
-package com.jad.controller;
+package com.jad.gobblingogre.controller;
 
-import com.jad.model.IModel;
-import com.jad.view.IView;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.jad.gobblingogre.model.IModel;
+import com.jad.gobblingogre.view.IView;
 
 public class Controller implements IController {
     private final IModel model;

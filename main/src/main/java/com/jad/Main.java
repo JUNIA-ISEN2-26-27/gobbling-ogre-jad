@@ -1,11 +1,11 @@
 package com.jad;
 
-import com.jad.controller.Controller;
-import com.jad.controller.IController;
-import com.jad.model.IModel;
-import com.jad.model.Model;
-import com.jad.view.IView;
-import com.jad.view.View;
+import com.jad.gobblingogre.controller.Controller;
+import com.jad.gobblingogre.controller.IController;
+import com.jad.gobblingogre.model.IModel;
+import com.jad.gobblingogre.model.Model;
+import com.jad.gobblingogre.view.IView;
+import com.jad.gobblingogre.view.View;
 
 public enum Main {
     ;

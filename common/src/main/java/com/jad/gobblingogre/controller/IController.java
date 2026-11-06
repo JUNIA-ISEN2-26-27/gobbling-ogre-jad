@@ -1,4 +1,4 @@
-package com.jad.controller;
+package com.jad.gobblingogre.controller;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.jad.view;
+package com.jad.gobblingogre.view;
 
-import com.jad.controller.IController;
-import com.jad.model.IModel;
+import com.jad.gobblingogre.controller.IController;
+import com.jad.gobblingogre.model.IModel;
 
 public class View implements IView {
     private final IModel model;
