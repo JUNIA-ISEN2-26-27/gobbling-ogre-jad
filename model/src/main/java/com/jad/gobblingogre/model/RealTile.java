@@ -41,9 +41,7 @@ enum RealTile implements Tile {
     }
 
     public static RealTile getRandomNotWalkableTile() {
-        final RealTile[] tiles = RealTile.values();
-        final int randomTileIndex = (int) (Math.random() * (tiles.length - 1)) + 1;
-        return tiles[randomTileIndex];
+        return RealTile.OAK;
     }
 
     public final boolean isWalkable() {

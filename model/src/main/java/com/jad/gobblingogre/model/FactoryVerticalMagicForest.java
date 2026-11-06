@@ -15,6 +15,6 @@ public class FactoryVerticalMagicForest implements FactoryForest {
             }
         }
 
-        return new RectangleForest(height, width, tiles);
+        return new VerticalMagicForest(height, width, tiles);
     }
 }

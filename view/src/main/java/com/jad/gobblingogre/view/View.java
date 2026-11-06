@@ -31,7 +31,7 @@ public class View implements IView {
 
     @Override
     public void display() {
-        final Board board = this.model.getBoard(new Point(0, 0), new Point(100, 20));
+        final Board board = this.model.getBoard(new Point(-10, -5), new Point(100, 20));
         StringBuilder stringBuilder = new StringBuilder();
         for (int row = 0; row < board.getHeight(); row++) {
             for (int column = 0; column < board.getWidth(); column++) {
