@@ -18,9 +18,9 @@ public class View implements IView {
         this.model = model;
         TextWindowSettings textWindowSettings = new TextWindowSettings();
         textWindowSettings.setTitle("XenoJava");
-        textWindowSettings.setScreenHeight(110);
-        textWindowSettings.setScreenWidth(450);
-        textWindowSettings.setFontSize(6f);
+        textWindowSettings.setScreenHeight(this.model.getHeight() * Tile.SPRITE_HEIGHT + 1);
+        textWindowSettings.setScreenWidth(this.model.getWidth() * Tile.SPRITE_WIDTH + 1);
+        textWindowSettings.setFontSize(10f);
         this.textWindow = new TextWindow(textWindowSettings);
         this.textWindow.setVisible(true);
     }

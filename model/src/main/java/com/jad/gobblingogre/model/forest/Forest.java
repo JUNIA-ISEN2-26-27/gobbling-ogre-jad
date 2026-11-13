@@ -20,4 +20,7 @@ public interface Forest {
     int wrapX(int x);
 
     int wrapY(int y);
+
+    Point wrapPosition(Point nextPosition);
+
 }

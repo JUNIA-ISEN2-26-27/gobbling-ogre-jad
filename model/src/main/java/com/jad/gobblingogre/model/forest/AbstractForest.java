@@ -53,4 +53,9 @@ abstract class AbstractForest implements Forest {
         return this.getTile(newPosition).isWalkable();
     }
 
+    @Override
+    public Point wrapPosition(final Point nextPosition) {
+        return new Point(this.wrapX(nextPosition.x), this.wrapY(nextPosition.y));
+    }
+
 }

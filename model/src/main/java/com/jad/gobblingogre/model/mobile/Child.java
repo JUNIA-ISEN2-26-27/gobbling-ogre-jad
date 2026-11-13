@@ -1,6 +1,8 @@
 package com.jad.gobblingogre.model.mobile;
 
 import com.jad.gobblingogre.model.Sprite;
+import com.jad.gobblingogre.model.mobile.behaviorDie.ChildDie;
+import com.jad.gobblingogre.model.mobile.behaviorIsEdible.isEdible;
 import com.jad.gobblingogre.model.mobile.behaviormove.RandomChildMove;
 
 import java.awt.*;
@@ -14,6 +16,9 @@ public class Child extends AbstractMobile {
                       {' ', ' ', ' ', '■', ' ', ' '},
                       {' ', ' ', '╾', '▒', '╼', ' '},
                       {' ', ' ', '┛', ' ', '┗', ' '}
-              }));
+              }),
+              0);
+        this.setBehaviorDie(new ChildDie());
+        this.setBehaviorIsEdible(new isEdible());
     }
 }

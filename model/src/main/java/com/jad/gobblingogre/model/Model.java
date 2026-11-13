@@ -10,6 +10,7 @@ import com.jad.gobblingogre.model.mobile.Mobiles;
 import java.awt.*;
 
 public class Model implements IModel {
+    private static final int TURNS_NUMBER = 2;
     private Forest forest;
     private AbstractFactoryForest factory = new AbstractFactoryForest();
     private Mobiles mobiles;
@@ -17,7 +18,8 @@ public class Model implements IModel {
     public Model() {
         this.forest = this.factory.createForest(ForestType.MAGIC, 20, 20, 10);
         this.mobiles = new Mobiles(this.forest);
-        this.mobiles.createMobile(MobileType.OGRE, 1);
+        this.mobiles.createMobileAtRandomPosition(MobileType.OGRE, 1);
+        this.mobiles.createMobileAtRandomPosition(MobileType.CHILD, 50);
     }
 
 
@@ -36,8 +38,20 @@ public class Model implements IModel {
 
     @Override
     public void moveMobiles() {
-        for (Mobile mobile : this.mobiles) {
-            mobile.move(this.forest, this.mobiles);
+        for (int turn = 0; turn < Model.TURNS_NUMBER; turn++) {
+            for (Mobile mobile : this.mobiles) {
+                if (mobile.getTurnNumber() == turn) mobile.move(this.forest, this.mobiles);
+            }
         }
+    }
+
+    @Override
+    public int getWidth() {
+        return this.forest.getWidth();
+    }
+
+    @Override
+    public int getHeight() {
+        return this.forest.getHeight();
     }
 }

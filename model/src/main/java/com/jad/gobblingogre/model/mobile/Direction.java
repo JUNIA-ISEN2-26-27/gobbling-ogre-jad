@@ -12,6 +12,10 @@ public enum Direction {
         return Direction.values()[(int) (Math.random() * Direction.values().length)];
     }
 
+    public Point getNextPosition(final int x, final int y) {
+        return this.getNextPosition(new Point(x, y));
+    }
+
     public Point getNextPosition(final Point position) {
         return switch (this) {
             case NORTH -> new Point(position.x, position.y - 1);

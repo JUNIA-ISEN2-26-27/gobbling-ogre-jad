@@ -7,4 +7,8 @@ public interface IModel {
     Board getBoard(Point start, Point end);
 
     void moveMobiles();
+
+    int getWidth();
+
+    int getHeight();
 }
