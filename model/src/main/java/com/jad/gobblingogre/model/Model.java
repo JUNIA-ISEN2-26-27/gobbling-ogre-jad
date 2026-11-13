@@ -15,9 +15,9 @@ public class Model implements IModel {
     private Mobiles mobiles;
 
     public Model() {
-        this.forest = this.factory.createForest(ForestType.VERTICAL_MAGIC, 50, 10, 10);
+        this.forest = this.factory.createForest(ForestType.MAGIC, 20, 20, 10);
         this.mobiles = new Mobiles(this.forest);
-        this.mobiles.createMobile(MobileType.OGRE, 50);
+        this.mobiles.createMobile(MobileType.OGRE, 1);
     }
 
 

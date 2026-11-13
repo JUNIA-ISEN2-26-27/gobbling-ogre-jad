@@ -10,8 +10,8 @@ abstract class AbstractForest implements Forest {
     private final RealTile[][] tiles;
 
     AbstractForest(final int height, final int width, final RealTile[][] tiles) {
-        this.height = Math.max(height, 10);
-        this.width = Math.max(width, 10);
+        this.height = Math.max(height, 5);
+        this.width = Math.max(width, 5);
         this.tiles = tiles;
     }
 
